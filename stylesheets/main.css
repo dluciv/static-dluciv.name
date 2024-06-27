@@ -5,11 +5,24 @@
 
 :root {
     --phosphor-hue:    45deg;
+    animation: color-fun infinite;
+    --duration: 0s;
+    animation-duration: var(--duration);
 
     --phosphor-bright: hsl(var(--phosphor-hue), 100%, 60%);
     --phosphor:        hsl(var(--phosphor-hue), 100%, 40%);
     --phosphor-dark:   hsl(var(--phosphor-hue), 100%, 18%);
     --phosphor-black:  hsl(var(--phosphor-hue), 100%, 7%);
+}
+
+@keyframes color-fun {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 
 
