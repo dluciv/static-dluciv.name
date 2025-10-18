@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'oldschool';
-    src: url(../fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf);
+    /* src: url(../fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf); */
+    src: url(../fonts/DEC_Terminal_Modern/decterm.ttf);
 }
 
 :root {
@@ -59,15 +60,9 @@ body, h1, h2, .searchinput {
   font-weight: normal;
   font-family: 'oldschool', 'Lucida Console', 'Monospace', monospace;
   text-shadow:
-    +0.03em 0px 0.03em var(--phosphor),
-    -0.02em  0px 0.02em var(--phosphor);
+    +0.04em 0px 0.04em var(--phosphor),
+    -0.03em  0px 0.03em var(--phosphor);
   text-rendering: geometricPrecision;
-}
-
-/* BG */ div.statusbar, h2, a:hover, .searchinput {
-  background-image: url(../scanlines20.png);
-  background-size: contain;
-  background-repeat: repeat;
 }
 
 @media (max-resolution: 100dpi) {
@@ -178,8 +173,8 @@ a:hover {
   color: var(--phosphor-bright);
   background-color: var(--phosphor-dark);
   text-shadow:
-    +0.04em  0px 0.04em var(--phosphor-bright),
-    -0.02em 0px 0.02em var(--phosphor-bright);
+    +0.05em  0px 0.05em var(--phosphor-bright),
+    -0.03em 0px 0.03em var(--phosphor-bright);
 }
 
 
@@ -219,3 +214,57 @@ a:before {
   width: 24em;
   display: inline;
 }
+
+div#fglayer {
+  z-index: 500;
+}
+
+@keyframes gradientShift0 {
+    0% { background-position: 0% 0%; }
+   25% { background-position: 0% 25%; }
+   50% { background-position: 0% 50%; }
+   75% { background-position: 0% 75%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes gradientShift {
+  to {
+    background-position-y: .25rem
+  }
+}
+
+.crtoverlay, .crtunderlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.crtunderlay {
+  z-index: 0;
+  opacity: 0.125;
+  background: linear-gradient(to top,
+    #000000, var(--phosphor-dark),
+    var(--phosphor-dark), #000000
+  );
+  background-size: cover;
+  background-size: 100% 4px;
+
+  animation: gradientShift 0.25s linear infinite;
+}
+
+.crtoverlay {
+  z-index: 1000;
+  opacity: 0.3;
+  background: linear-gradient(to top,
+    #000000, var(--phosphor),
+    var(--phosphor), #000000
+  );
+  background-size: cover;
+  background-size: 100% 4px;
+
+  animation: gradientShift 0.25s linear infinite;
+}
+
