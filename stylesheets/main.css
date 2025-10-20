@@ -229,7 +229,7 @@ div#fglayer {
 
 @keyframes gradientShift {
   to {
-    background-position-y: .25rem
+    background-position-y: 8px;
   }
 }
 
@@ -246,10 +246,8 @@ div#fglayer {
   z-index: 0;
   opacity: 0.125;
   background: linear-gradient(to top,
-    #000000, var(--phosphor-dark),
-    var(--phosphor-dark), #000000
+    var(--phosphor-black), var(--phosphor-dark), var(--phosphor)
   );
-  background-size: cover;
   background-size: 100% 4px;
 
   animation: gradientShift 0.25s linear infinite;
@@ -259,12 +257,9 @@ div#fglayer {
   z-index: 1000;
   opacity: 0.3;
   background: linear-gradient(to top,
-    #000000, var(--phosphor),
-    var(--phosphor), #000000
+    var(--phosphor-black), var(--phosphor-dark), var(--phosphor)
   );
-  background-size: cover;
   background-size: 100% 4px;
 
   animation: gradientShift 0.25s linear infinite;
 }
-
