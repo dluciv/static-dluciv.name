@@ -211,7 +211,7 @@ div#fglayer {
 
 @keyframes scanlineShift {
   to {
-    background-position-y: clamp(4px, 0.5vmin, 12px);
+    background-position-y: clamp(4px, 8px, 12px);
   }
 }
 
@@ -245,10 +245,9 @@ div#fglayer {
   z-index: 1000;
   opacity: 0.3;
   background: linear-gradient(to top,
-    var(--phosphor-black), var(--phosphor-dark), var(--phosphor)
+    var(--phosphor-black), var(--phosphor)
   );
-  background-size: 100% clamp(2px, 0.25vmin, 6px);
-
+  background-size: 100% clamp(2px, 4px, 6px);
   animation: scanlineShift 0.25s linear infinite;
 }
 
