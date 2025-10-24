@@ -232,20 +232,19 @@ div#fglayer {
 
 .crtunderlay {
   z-index: 0;
-  opacity: 0.2;
-  background: linear-gradient(to top,
-    var(--phosphor-dark), var(--phosphor-black), var(--phosphor-black)
+  opacity: 0.25;
+  background: linear-gradient(to bottom,
+    transparent, var(--phosphor-dark)
   );
-  background-size: 100% 100vh;
-
+  background-size: 100% 100%;
   animation: frameInterference 10.0s linear infinite;
 }
 
 .crtoverlay {
   z-index: 1000;
-  opacity: 0.3;
-  background: linear-gradient(to top,
-    var(--phosphor-black), var(--phosphor)
+  opacity: 0.5;
+  background: linear-gradient(to bottom,
+    transparent clamp(1px, 2px, 3px), var(--phosphor)
   );
   background-size: 100% clamp(2px, 4px, 6px);
   animation: scanlineShift 0.25s linear infinite;
