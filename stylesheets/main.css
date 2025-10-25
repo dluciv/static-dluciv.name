@@ -244,7 +244,7 @@ div#fglayer {
   z-index: 1000;
   opacity: 0.5;
   background: linear-gradient(to bottom,
-    transparent clamp(1px, 2px, 3px), var(--phosphor)
+    transparent, var(--phosphor), var(--phosphor-black)
   );
   background-size: 100% clamp(2px, 4px, 6px);
   animation: scanlineShift 0.25s linear infinite;
