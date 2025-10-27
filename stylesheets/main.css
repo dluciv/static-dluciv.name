@@ -221,7 +221,12 @@ div#fglayer {
   }
 }
 
-.crtoverlay, .crtunderlay {
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.crtanode, .crtoverlay, .crtunderlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -241,13 +246,21 @@ div#fglayer {
 }
 
 .crtoverlay {
-  z-index: 1000;
+  z-index: 500;
   opacity: 0.25;
   background: linear-gradient(to bottom,
     transparent, var(--phosphor), var(--phosphor-black)
   );
   background-size: 100% clamp(2px, 4px, 6px);
   animation: scanlineShift 0.25s linear infinite;
+}
+
+.crtanode {
+  z-index: 1000;
+  background: black;
+  background-size: 100% 100%;
+  animation: fadeOut 3.0s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes cursor-blink {
