@@ -205,10 +205,6 @@ a:before {
   display: inline;
 }
 
-div#fglayer {
-  z-index: 500;
-}
-
 @keyframes scanlineShift {
   to {
     background-position-y: clamp(4px, 8px, 12px);
@@ -224,6 +220,23 @@ div#fglayer {
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0; }
+}
+
+@keyframes blurOut {
+    0% {
+        transform: translateY(0) scale(0.85);
+        filter: blur(clamp(8px, 16px, 26px));
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+div#fglayer {
+  z-index: 500;
+  animation: blurOut 3s;
+  animation-fill-mode: forwards;
 }
 
 .crtanode, .crtoverlay, .crtunderlay {
@@ -259,7 +272,7 @@ div#fglayer {
   z-index: 1500;
   background: black;
   background-size: 100% 100%;
-  animation: fadeOut 3.0s;
+  animation: fadeOut 6s;
   animation-fill-mode: forwards;
 }
 
