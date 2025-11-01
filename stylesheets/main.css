@@ -232,7 +232,7 @@ a:before {
     }
     100% {
         transform: translateY(0) scale(1);
-        filter: blur(clamp(0.25px, 0.5px, 1px));
+        filter: blur(0.02em);
         text-shadow:
           +0.04em 0px 0.04em var(--phosphor),
           -0.02em 0px 0.02em var(--phosphor);
@@ -268,7 +268,7 @@ div#fglayer {
   z-index: 1000;
   opacity: 0.25;
   background: linear-gradient(to bottom,
-    black 0%, black 40%, var(--phosphor) 50%, var(--phosphor) 90%
+    black 0%, black 55%, var(--phosphor) 65%, var(--phosphor) 90%
   );
   background-size: 100% clamp(2px, 4px, 6px);
   animation: scanlineShift 0.25s linear infinite;
