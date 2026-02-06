@@ -6,7 +6,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
     <script async>
-      window.location = "https://dluciv.name/?mt";
+      window.location = window.location.href.replace(/\.name\/([^\/]+)(\/?)/g, ".name/?$1");
     </script>
 
   </head>
