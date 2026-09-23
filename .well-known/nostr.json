@@ -1,0 +1,15 @@
+{
+  "names": {
+    "dluciv": "c53356464cbeef3b75c306e173aff2b704dd1caa31e310f864ceb3b8c1d2ba2d,
+    "_": "c53356464cbeef3b75c306e173aff2b704dd1caa31e310f864ceb3b8c1d2ba2d
+  },
+  "relays": {
+    "c53356464cbeef3b75c306e173aff2b704dd1caa31e310f864ceb3b8c1d2ba2d: [
+      "wss://nostr.mom",
+      "wss://nos.lol",
+      "wss://relay.primal.net",
+      "wss://relay.damus.io",
+      "wss://nostr.dluciv.name"
+    ]
+  }
+}
